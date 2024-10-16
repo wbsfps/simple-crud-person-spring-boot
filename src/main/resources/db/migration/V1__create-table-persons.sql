@@ -1,0 +1,6 @@
+CREATE TABLE PERSONS(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT(3),
+    email VARCHAR(100)
+);
