@@ -1,6 +1,6 @@
 package br.com.wbs.simple_crud_person.controller;
 
-import br.com.wbs.simple_crud_person.domain.*;
+import br.com.wbs.simple_crud_person.domain.person.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -19,7 +19,7 @@ public class PersonController {
     private PersonRepository repository;
 
     @GetMapping
-    public ResponseEntity<Page<PersonResponseDTO>> getAll(@PageableDefault Pageable pageable) {
+    public ResponseEntity<Page<PersonResponseDTO>> getAll(@PageableDefault(size = 5) Pageable pageable) {
         var page = repository.findAllByActivateTrue(pageable).map(PersonResponseDTO::new);
         return ResponseEntity.ok(page);
     }

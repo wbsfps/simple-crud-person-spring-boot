@@ -1,4 +1,4 @@
-package br.com.wbs.simple_crud_person.domain;
+package br.com.wbs.simple_crud_person.domain.person;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

@@ -1,4 +1,4 @@
-package br.com.wbs.simple_crud_person.domain;
+package br.com.wbs.simple_crud_person.domain.person;
 
 public record PersonResponseDTO (
         Long id,

@@ -1,4 +1,4 @@
-package br.com.wbs.simple_crud_person.domain;
+package br.com.wbs.simple_crud_person.domain.person;
 
 
 import org.springframework.data.domain.Page;
