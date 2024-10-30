@@ -1,5 +1,6 @@
 package br.com.wbs.simple_crud_person.domain.person;
 
+import br.com.wbs.simple_crud_person.domain.job.Job;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -23,11 +24,15 @@ public class Person {
     private String email;
     @Column(name = "activate")
     private Boolean activate;
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "job_id")
+    private Job job;
 
-    public Person(PersonRequestDTO person) {
+    public Person(PersonRequestDTO person, Job job) {
         this.name = person.name();
         this.age = person.age();
         this.email = person.email();
+        this.job = job;
         this.activate = true;
     }
 

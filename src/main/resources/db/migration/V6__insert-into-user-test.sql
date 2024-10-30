@@ -1,0 +1,1 @@
+insert into users(login, password) values ('test@test.com', '$2a$10$9scexCL09oAJhHCDt8MteOPD4AS8eA.qDFZBZj/GiwpE1eXqqwV2G')
